@@ -1,0 +1,20 @@
+let iter : lambda acc lambda a lambda b lambda f
+    if >= a b acc
+    else app app app app iter app app f acc a + a 1 b f
+
+let listpb : lambda acc lambda _
+    + acc [chain io.Print ">" -> io.ReadInt]
+
+let n : chain io.Print "Enter n:" -> io.ReadInt
+let inputList : app app app app iter [] 0 n listpb
+let sq : lambda x math1.Square x
+
+let cct : lambda acc lambda cur + acc util1.ToString cur
+let concat : list3.Fold cct "" inputList
+
+chain
+io.Print "Here is list of squares: " $
+io.Print list2.Map sq inputList $ io.NewLine $
+io.Print "Sum of the list: " $
+io.Print list2.Reduce lambda x lambda y + x y inputList $ io.NewLine $
+io.Print "Concatenate all numbers in list: " $ io.Print concat -> io.NewLine

@@ -1,0 +1,19 @@
+let lmap : lambda f lambda l
+    if list1.IsEmpty l []
+    else + [app f list1.Head l] app app lmap f list1.Tail l
+
+let sq : lambda x * x x
+
+chain
+io.Print app app lmap sq [1, 2, 3]
+->
+
+let lfold : lambda folder lambda state lambda l
+    if list1.IsEmpty l state
+    else app app folder app app app lfold folder state list1.Tail l list1.Head l
+
+let sum : lambda x lambda y + x y
+chain
+io.NewLine
+->
+io.Print app app app lfold sum 0 [1, 2, 3, 4, 5]

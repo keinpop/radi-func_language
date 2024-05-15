@@ -1,0 +1,6 @@
+chain
+io.Print "Hello" $
+io.NewLine $
+io.Print "World!" $
+io.NewLine ->
+void 

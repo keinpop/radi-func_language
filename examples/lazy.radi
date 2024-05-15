@@ -1,0 +1,7 @@
+let sayMeow : lazy chain io.Print "meow" $ io.NewLine -> void
+
+let forceNTimes : lambda n lambda f
+    if <= n 0 void
+    else chain force f -> app app forceNTimes - n 1 f
+
+app app forceNTimes 5 sayMeow 

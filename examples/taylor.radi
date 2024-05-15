@@ -1,0 +1,16 @@
+let TAYLORN : 10
+
+let iter : lambda acc lambda a lambda b lambda f
+    if >= a b acc
+    else app app app app iter app app f acc a + a 1 b f
+let product : lambda x lambda y * x y
+let fact : lambda n app app app app iter 1 1 + n 1 product
+let pow : lambda x lambda n
+    math2.Pow x math1.ToFloat n
+let taylorMember : lambda x lambda acc lambda i
+    + acc / app app pow x i math1.ToFloat app fact i
+
+let exp : lambda x app app app app iter 0.0 0 TAYLORN app taylorMember x
+
+chain io.Print "Enter x and I will compute exp(x):" ->
+io.Print app exp io.ReadFloat

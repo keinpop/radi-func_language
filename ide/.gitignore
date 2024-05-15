@@ -1,0 +1,11 @@
+backend/bin
+frontend/img
+.idea
+.mono
+.vscode
+
+backend/bin/*
+.idea/*
+.mono/*
+.vscode/*
+frontend/img/*

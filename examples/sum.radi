@@ -1,0 +1,18 @@
+let iter : lambda acc lambda a lambda b lambda f
+    if >= a b acc
+    else
+        let acc1 : app app app app iter acc + a 1 b f
+        app app f acc1 a
+
+let prod : lambda x lambda y * x y
+
+let fact : lambda n app app app app iter 1 1 + n 1 prod
+
+let rdintandadd : lambda acc lambda dummy
+    + acc io.ReadInt
+
+let main : lazy
+    chain io.Print "Enter n:" -> let cnt : io.ReadInt
+    chain io.Print "Enter n number (each on new line):" $ io.NewLine 
+    -> io.Print app app app app iter 0 0 cnt rdintandadd
+force main

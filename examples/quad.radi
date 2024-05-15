@@ -1,0 +1,13 @@
+chain io.Print "Enter a, b, c coefficients (each on new line):" $ io.NewLine ->
+let f : lambda a lambda b lambda c 
+    let d : - math1.Square b * * 4. a c
+        if < d 0. chain io.Print "No roots" -> io.NewLine else
+            chain io.Print "Roots: " -> 
+            let x1 : / - ~ b math1.Sqrt d * 2. a
+            let x2 : / + ~ b math1.Sqrt d * 2. a
+            chain io.Print x1 $ io.Print " " $ io.Print x2 $ io.NewLine -> 
+            void
+let a : io.ReadFloat
+let b : io.ReadFloat
+let c : io.ReadFloat
+app app app f a b c
